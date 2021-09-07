@@ -4,7 +4,22 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>tusd_renamer</RootNamespace>
+    <AssemblyName>post-finish</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="testdata.json" />
+    <None Remove="test_data.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="testdata.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="test_data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
